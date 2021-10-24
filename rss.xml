@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Haiku Docs]]></title><description><![CDATA[Short and powerfull documentation and tutorials about topics that
+            power the web. Inspired by Haiku we try and keep the content short
+            and to the point.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Oct 2021 03:09:33 GMT</lastBuildDate><item><title><![CDATA[display:flex vs display:inline flex]]></title><description><![CDATA[Do you know the difference between  and ? When should you use the one over the other?  When using  the container element acts like a block…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/flexbox/display-flex-flex-vs-inline/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/flexbox/display-flex-flex-vs-inline/</guid><pubDate>Sat, 23 Oct 2021 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you know the difference between &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;? When should you use the one over the other?&lt;/p&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; the container element acts like a block level element. The flex container element as wide as its parent container (the blue background is the flex container element).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/052f3e0fe1d017c5886003a2a66f71ae/2215f/display-flex.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 15.18987341772152%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAACE4AAAhOAFFljFgAAAA2ElEQVQI1y2OW0vCYACG98MrCCLJrsJKYi1xazlxnwUdXCdCt1q6UpfRtiTxZtV1lwXfE/vw4rl4X3gPmhVlv+YgxXmZS+spoxa+cjT6oDmZY0YptYcJhd+IZwpzkCiUHs+wh1NE9iXdJMdN8h9t67zLunMqVw4cqjeP7FyFLOk2peYZe3cRm8Jjte6yZp9Qdjvs+2OWjQYbrQvKwlODx+/fRZkU6SeaEcSyCFY8X1Zv+xw+T9m9Dql4AXpvRL3/ht4bsn15rzwjiNG7C93xsaKM9uKhSPK/f3ydvf+ErsvOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display:flex being used.&quot;
+        title=&quot;example of display:flex being used.&quot;
+        src=&quot;/static/052f3e0fe1d017c5886003a2a66f71ae/f058b/display-flex.png&quot;
+        srcset=&quot;/static/052f3e0fe1d017c5886003a2a66f71ae/c26ae/display-flex.png 158w,
+/static/052f3e0fe1d017c5886003a2a66f71ae/6bdcf/display-flex.png 315w,
+/static/052f3e0fe1d017c5886003a2a66f71ae/f058b/display-flex.png 630w,
+/static/052f3e0fe1d017c5886003a2a66f71ae/40601/display-flex.png 945w,
+/static/052f3e0fe1d017c5886003a2a66f71ae/78612/display-flex.png 1260w,
+/static/052f3e0fe1d017c5886003a2a66f71ae/2215f/display-flex.png 1548w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.parent {
+  background-color: yellow;
+  width: 300px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-right: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-right: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt; the flex container element acts like an inline level element. The flex container element is &lt;strong&gt;only&lt;/strong&gt; as wide as its child elements (the yellow background is the parent container element, the blue background is the flex container element).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c3d4cffa04ae554dceb40c38c6390d95/2215f/display-inline-flex.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 12.658227848101264%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAACE4AAAhOAFFljFgAAAA30lEQVQI1x3KXUvCYByG8WffOoio2dEIpIUNa9We2cxejIjS0pa1UW5aUwczyqLzPsL/5L5jnl7XTwXZQoLsW9x4InYnEp3OpTX7FS8ppP44lu2bp2UrXXP6IzopxAnTpW/NFqLf/yQsKkIqAQ1Rq3vHNBttNt4+uXXZ44rjcUOfs3odUicFy78ZXHH96IxrByd0HhJaF3c0/TYr/inN5oD3uUVSETCo6oMxdroxDl9y6HQOJ0xR672i1h/CH33ASwq48RS7/SHsToTSu/EE+1EG+zZEtZvj+csCoQAa+AdRybdE8gfqDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display:inline-flex being used.&quot;
+        title=&quot;example of display:inline-flex being used.&quot;
+        src=&quot;/static/c3d4cffa04ae554dceb40c38c6390d95/f058b/display-inline-flex.png&quot;
+        srcset=&quot;/static/c3d4cffa04ae554dceb40c38c6390d95/c26ae/display-inline-flex.png 158w,
+/static/c3d4cffa04ae554dceb40c38c6390d95/6bdcf/display-inline-flex.png 315w,
+/static/c3d4cffa04ae554dceb40c38c6390d95/f058b/display-inline-flex.png 630w,
+/static/c3d4cffa04ae554dceb40c38c6390d95/40601/display-inline-flex.png 945w,
+/static/c3d4cffa04ae554dceb40c38c6390d95/78612/display-inline-flex.png 1260w,
+/static/c3d4cffa04ae554dceb40c38c6390d95/2215f/display-inline-flex.png 1548w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.parent {
+  background-color: yellow;
+  width: 300px;
+}
+
+.flex {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-right: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-right: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt; you can have two flex container elements side by side if the parent container is wide enough.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b467bd425304abfd289393e570123378/fe60e/display-inline-flex-multiple-row.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.39240506329114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAACE4AAAhOAFFljFgAAAApUlEQVQI1xXG2wrBcADAYRfykC49gdyQKIlc0JjDtJYoZkWZw2iOY03NIXLjUeSC/0++qy9Qnu2EPD+gOhehOldK5vp/NPdGzfYomSuUjY/m3qnbHrLloGwfGP4M7xlBsi5UFicxPOt8vsFvIG9M3ylNJ6l2hbq/ktPHxBttiqMlzY1PumWQUNpkOgOqC5d8f0xU6tCYKByfYbI9m5jcFZpVAEKvHwCpdhdqz0GMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display:inline-flex being used with multiple flex containers side by side.&quot;
+        title=&quot;example of display:inline-flex being used with multiple flex containers side by side.&quot;
+        src=&quot;/static/b467bd425304abfd289393e570123378/f058b/display-inline-flex-multiple-row.png&quot;
+        srcset=&quot;/static/b467bd425304abfd289393e570123378/c26ae/display-inline-flex-multiple-row.png 158w,
+/static/b467bd425304abfd289393e570123378/6bdcf/display-inline-flex-multiple-row.png 315w,
+/static/b467bd425304abfd289393e570123378/f058b/display-inline-flex-multiple-row.png 630w,
+/static/b467bd425304abfd289393e570123378/40601/display-inline-flex-multiple-row.png 945w,
+/static/b467bd425304abfd289393e570123378/78612/display-inline-flex-multiple-row.png 1260w,
+/static/b467bd425304abfd289393e570123378/fe60e/display-inline-flex-multiple-row.png 1677w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If the parent element is not wide enough the second flex container element will move to a second line.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ede5f82d2c7a20172e5ad69475b72171/e8814/display-inline-flex-multiple-row-not-enough-width.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30.37974683544304%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAACE4AAAhOAFFljFgAAABmUlEQVQY0y2Ob09ScRzFf6OX0NbjXlBvR1PTqKS1NUXBuAoiBJiEKQgIyhUEuvzrXupSdzCdtbbKams9sM31iO+nAT04O+c8OJ8dFSgZf0M1ixfvziVu9gnoBpreYMe+YNRDNZOV3AnR1nu2356NFWnYBEoGkabNjv2RhNmT31e3AHWtFpM17m6kZSZ4wHLeIlAZMB8pMBfO8yCh89y6ZCFaZHo9zf3YMbOhLGu6g+dlBXe8yL1wluVcm19/bgsoVNbySsbS2Gv7ZL/jp+hEyPdC7DZXeNVaHfeCs0XGDLDfWSNlLJGxguSdXdLdGMnGJlk7JlfXN0cPRVUHC2J88mL90KTx2cuJ85D6xVPM7xrtLz7K/UUqfc84m5d+Wt+2OP95ZzRmOHQBLoZDJYiaAB8lDebCBXEnKngLPVaPHGZCh3hSDZ7stQm3vjKlHTAfKfE4VWN6s4P+wT0BimvsIwlKRBRqvdyUZ8d1/IVTCZ52iL9xCL+28GZL+A7LbHcHRFs2/mIVTa+ylOtSP5v9//AGI4jIBAZq+A9dA2zZAoaZbAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display:inline-flex being used with multiple flex containers with not enough width to support both flex containers.&quot;
+        title=&quot;example of display:inline-flex being used with multiple flex containers with not enough width to support both flex containers.&quot;
+        src=&quot;/static/ede5f82d2c7a20172e5ad69475b72171/f058b/display-inline-flex-multiple-row-not-enough-width.png&quot;
+        srcset=&quot;/static/ede5f82d2c7a20172e5ad69475b72171/c26ae/display-inline-flex-multiple-row-not-enough-width.png 158w,
+/static/ede5f82d2c7a20172e5ad69475b72171/6bdcf/display-inline-flex-multiple-row-not-enough-width.png 315w,
+/static/ede5f82d2c7a20172e5ad69475b72171/f058b/display-inline-flex-multiple-row-not-enough-width.png 630w,
+/static/ede5f82d2c7a20172e5ad69475b72171/40601/display-inline-flex-multiple-row-not-enough-width.png 945w,
+/static/ede5f82d2c7a20172e5ad69475b72171/78612/display-inline-flex-multiple-row-not-enough-width.png 1260w,
+/static/ede5f82d2c7a20172e5ad69475b72171/e8814/display-inline-flex-multiple-row-not-enough-width.png 1392w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;flex-direction:column&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt; the flex container element will be as wide as the widest child element.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1115ff0b4cf378d125fbfd4cd56490e2/2215f/display-inline-flex-direction-column.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.43037974683544%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAACE4AAAhOAFFljFgAAABdElEQVQoz5WSW0sCURSFD/3rXgKzIIjsDmapjbdGc0akq6EyTlqWpZa3GTLLiW5QLwVBhHvFHM0IAp2HxT4v5+ODtdjctvK1dliCcFInf0GDpD0g2riHpBkQa29QDREAA9EIiBh//xPq3Q82EYjBJkTJJmzCe1yFrD9xqKzdIVx/R8aIDQPsQ9l6vka+0wY3DBavEK60eaL1WwQvXpFqDjYk6hsSc8RTWFWLcGfLcKYL8OQu4cqcYzmhYkVtYau8xj91BhvysGk5gXFfFGPuDdj9MiZDcTjTp7AJIkZdWwhnZ7vAzpBA4aSOjYsWQqUmj/9Mh3h5g0ilhUD5BQd60JqhPRCDabmUyGFxPwtfQePF/JSiDl9KF2hCHPEkh05FdrCer0HSHyE1urNR2pI1oNlupGogUjUoVL42L5+NpN1ZAf62POYRTTuaiSfhUs4Ru3ruDfsHKFvb4Ypy1lnYO8T8rkreowpk/fEPMNPeHNqQiH1+AwTspygI7+ejAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display:inline-flex in combination with flex-direaction:column showing that the parent flex container will grow as wide as the widest child element.&quot;
+        title=&quot;example of display:inline-flex in combination with flex-direaction:column showing that the parent flex container will grow as wide as the widest child element.&quot;
+        src=&quot;/static/1115ff0b4cf378d125fbfd4cd56490e2/f058b/display-inline-flex-direction-column.png&quot;
+        srcset=&quot;/static/1115ff0b4cf378d125fbfd4cd56490e2/c26ae/display-inline-flex-direction-column.png 158w,
+/static/1115ff0b4cf378d125fbfd4cd56490e2/6bdcf/display-inline-flex-direction-column.png 315w,
+/static/1115ff0b4cf378d125fbfd4cd56490e2/f058b/display-inline-flex-direction-column.png 630w,
+/static/1115ff0b4cf378d125fbfd4cd56490e2/40601/display-inline-flex-direction-column.png 945w,
+/static/1115ff0b4cf378d125fbfd4cd56490e2/78612/display-inline-flex-direction-column.png 1260w,
+/static/1115ff0b4cf378d125fbfd4cd56490e2/2215f/display-inline-flex-direction-column.png 1548w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;You can also have &lt;code class=&quot;language-text&quot;&gt;flex-direction:column&lt;/code&gt; containers side by side when using &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47beca7059306321c2c107121d67d457/5df5d/display-inline-flex-direction-column-side-by-side.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.16455696202532%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAACE4AAAhOAFFljFgAAABsElEQVQoz5WSWW8SYRhGJ/5LNbFR/4Q3YpEWxSrd7EUFywwdKFsh40IZK0unUFnKMgVaMYSyNLjEf2D6HdNJ5Erj9OLNc/WenCd5pJV3hV9+o4lS6Yrt+gDj8wM29t7y6sAkWG0TqE45mdwEJC7FDSv/cuJPSgtqCqeSEE45RqR9gdF3s6iqOAJxHgejbDd/0p7etx7Fv4EzqCSXuyJYPbMM5XKP/Nk8avUYpdKzDH1HY1rjO7YMhZCE5NWy+IwGWyXTMjzouVjRNHyGSeCoaRmeXNz9H3B20vPkB5xKHPeORqg55LC/iDeVwqVquMO7yLVvtKf37AOVyik75oBQ4wtq49yqHKrVCbeGhJs95NpXzMmcfaBLTbGU1NnQS6xnymS7DjzRCM9293mZKbCcNmmc37YPXM8U8WofWUpmeBLTyXYespnN4dXyeOJvWIgY1Ae3rlVZRDsjYp2RCLdGs8rR9oTE6RCl/h1zfI3Kjq3IVWXxQtvnajbFwVMevfbjSegsazr+T5PZDm0BNwvHl2t7h6y+L4hQa0SxP48/n2M1XWItnSPY+EFnOmdn2BbwN9Cjni+m40hNAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display:inline-flex in combination with flex-direaction:column showing that flex containers can be rendered side by side.&quot;
+        title=&quot;example of display:inline-flex in combination with flex-direaction:column showing that flex containers can be rendered side by side.&quot;
+        src=&quot;/static/47beca7059306321c2c107121d67d457/f058b/display-inline-flex-direction-column-side-by-side.png&quot;
+        srcset=&quot;/static/47beca7059306321c2c107121d67d457/c26ae/display-inline-flex-direction-column-side-by-side.png 158w,
+/static/47beca7059306321c2c107121d67d457/6bdcf/display-inline-flex-direction-column-side-by-side.png 315w,
+/static/47beca7059306321c2c107121d67d457/f058b/display-inline-flex-direction-column-side-by-side.png 630w,
+/static/47beca7059306321c2c107121d67d457/40601/display-inline-flex-direction-column-side-by-side.png 945w,
+/static/47beca7059306321c2c107121d67d457/78612/display-inline-flex-direction-column-side-by-side.png 1260w,
+/static/47beca7059306321c2c107121d67d457/5df5d/display-inline-flex-direction-column-side-by-side.png 1572w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
