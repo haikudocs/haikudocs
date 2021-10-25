@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Haiku Docs]]></title><description><![CDATA[Short and powerfull documentation and tutorials about topics that
             power the web. Inspired by Haiku we try and keep the content short
-            and to the point.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Oct 2021 03:09:33 GMT</lastBuildDate><item><title><![CDATA[display:flex vs display:inline flex]]></title><description><![CDATA[Do you know the difference between  and ? When should you use the one over the other?  When using  the container element acts like a block…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/flexbox/display-flex-flex-vs-inline/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/flexbox/display-flex-flex-vs-inline/</guid><pubDate>Sat, 23 Oct 2021 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you know the difference between &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;? When should you use the one over the other?&lt;/p&gt;
+            and to the point.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Oct 2021 23:31:53 GMT</lastBuildDate><item><title><![CDATA[display:flex vs display:inline flex]]></title><description><![CDATA[Do you know the difference between  and ? When should you use the one over the other?  When using  the container element acts like a block…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/flexbox/display-flex-flex-vs-inline/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/flexbox/display-flex-flex-vs-inline/</guid><pubDate>Sat, 23 Oct 2021 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you know the difference between &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;? When should you use the one over the other?&lt;/p&gt;
 &lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; the container element acts like a block level element. The flex container element as wide as its parent container (the blue background is the flex container element).&lt;/p&gt;
+&lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; the container element acts like a block level element. The flex container element is as wide as its parent container (the blue background is the flex container element).&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
@@ -38,7 +38,12 @@
     &lt;/span&gt;&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;.parent {
+  /* 
+    currently not visible due to the flex container element 
+    rendering as a block element 
+  */
   background-color: yellow;
+  border-radius: 8px;
   width: 300px;
 }
 
@@ -99,6 +104,7 @@
 &lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;.parent {
   background-color: yellow;
+  border-radius: 8px;
   width: 300px;
 }
 
@@ -155,6 +161,32 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.parent {
+  background-color: yellow;
+  border-radius: 8px;
+  width: 350px;
+}
+
+.flex {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-right: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-right: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;If the parent element is not wide enough the second flex container element will move to a second line.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -189,6 +221,36 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.parent {
+  background-color: yellow;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.flex {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.flex:first-child {
+  margin-bottom: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-right: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-right: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;flex-direction:column&lt;/code&gt; with &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt; the flex container element will be as wide as the widest child element.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -223,6 +285,33 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.parent {
+  background-color: yellow;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.flex {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-bottom: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;You can also have &lt;code class=&quot;language-text&quot;&gt;flex-direction:column&lt;/code&gt; containers side by side when using &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -256,4 +345,91 @@
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.parent {
+  background-color: yellow;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.flex {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-bottom: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;Your inline flex container elements can still render below one another instead of being rendered side by side if the parent container element is not wide enough to fit all the flex container elements side by side.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3ee1fa169bbf57681031b38df01dcb25/f058b/display-inline-flex-direction-column-being-stacked.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 90.50632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAABXElEQVQ4y63UyU7CYBQF4OLK+M4uHBYSmQSNSiNDg1QBwVJNsaVaQAoVBAJlFjQRnwL5jwHR6BJ+bnK3X85Jbi5jv06PnUkZ3tyQKF3/J8CAkLUmIZZ1QhhmuguNR8rBlpDIYboJpRv6ATuEWDYAhgEYy0Lg6UOJcEYDPmNEUq3fhO2lQdeNhp1QFB7FhDrg6UE2W0Go3IL/aQSp6aMHHYKKbe4Su7yGi+z+DJxMLMuDgUIdwWIN3lwfYvV4npACtF5l4ZYMHGnvkHsx+sqRog8BxQMuE4Y+3PyTkFkO5B+9iD+HIZgy9MEKQJugY4tLwpnqQemvoLJXK4GvdhAsf0Ayz+hBu5CenY1bbkB9CdODgYIJv14Dm3/DXTtID9oSMqxREXaxjFjB9X3YNHfo1xvkRNVxkKqTuOGmB6fPgc2UCJt/hdI7p6/sFO/He5EkHLcVonT+P9g5uNB8AWzqtCMfUUv7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display:inline-flex in combination with flex-direaction:column showing that flex containers will still render below one another if the parent container element is not wide enough to rendere the inline flex container elements side by side.&quot;
+        title=&quot;example of display:inline-flex in combination with flex-direaction:column showing that flex containers will still render below one another if the parent container element is not wide enough to rendere the inline flex container elements side by side.&quot;
+        src=&quot;/static/3ee1fa169bbf57681031b38df01dcb25/f058b/display-inline-flex-direction-column-being-stacked.png&quot;
+        srcset=&quot;/static/3ee1fa169bbf57681031b38df01dcb25/c26ae/display-inline-flex-direction-column-being-stacked.png 158w,
+/static/3ee1fa169bbf57681031b38df01dcb25/6bdcf/display-inline-flex-direction-column-being-stacked.png 315w,
+/static/3ee1fa169bbf57681031b38df01dcb25/f058b/display-inline-flex-direction-column-being-stacked.png 630w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.parent {
+  background-color: yellow;
+  border-radius: 8px;
+  width: 150px;
+}
+
+.flex {
+  display: inline-flex;
+  flex-direction: column;
+  background-color: lightblue;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.flex:first-child {
+  margin-bottom: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-bottom: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;</content:encoded></item></channel></rss>
