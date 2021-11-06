@@ -1,6 +1,298 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Haiku Docs]]></title><description><![CDATA[Short and powerfull documentation and tutorials about topics that
             power the web. Inspired by Haiku we try and keep the content short
-            and to the point.]]></description><link>https://haikudocs.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 26 Oct 2021 00:02:39 GMT</lastBuildDate><item><title><![CDATA[display:flex vs display:inline flex]]></title><description><![CDATA[Do you know the difference between  and ? When should you use the one over the other?  When using  the container element acts like a block…]]></description><link>https://haikudocs.com/flexbox/display-flex-flex-vs-inline/</link><guid isPermaLink="false">https://haikudocs.com/flexbox/display-flex-flex-vs-inline/</guid><pubDate>Sat, 23 Oct 2021 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you know the difference between &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;? When should you use the one over the other?&lt;/p&gt;
+            and to the point.]]></description><link>https://haikudocs.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 06 Nov 2021 00:40:55 GMT</lastBuildDate><item><title><![CDATA[flex-wrap and how flexbox items overflow or wrap]]></title><description><![CDATA[By default flex containers only render a single line across their main axis. This means if your flex container is not wide enough (for flex…]]></description><link>https://haikudocs.com/flexbox/flex-wrap/</link><guid isPermaLink="false">https://haikudocs.com/flexbox/flex-wrap/</guid><pubDate>Sat, 30 Oct 2021 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;By default flex containers only render a single line across their main axis.&lt;/p&gt;
+&lt;p&gt;This means if your flex container is not wide enough (for flex-direction:row) or tall enough (for flex-direction:column) that your flex items will overflow the container.&lt;/p&gt;
+&lt;h2&gt;Flex-direction:row&lt;/h2&gt;
+&lt;p&gt;Flex-direction:row will render only a single flex line on the horizontal axis. Rendering the flex items from left to right.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8bab4b9212a0d4e04329d71c566dcff3/024a2/flex-direction-row-overflow.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16.455696202531648%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAACE4AAAhOAFFljFgAAAA9ElEQVQI1y2MvUrDUBxHfwh+RB2bFBFdBBeVf0dfQKG7i7ub71K1CElL21fQJKbepk1uEm8MbVJKi7u4uXs7iMiVFoczncOB041PfJ5XHl1ObjchFgzpwQnJ66XkRwU5XkRPvZRYPyPbi8ljosL816PwvLo9B9aKcnnjo1Ra/zGM1bmuGzB5Lu/7mexkb7LOhLSisWwmE3n3/CItXsiWmC59Ix7Ldjr7qjPxbfL8vXp1TQB2sbm1A2APgA7gGFYw+q3ZgWqLqbLCkbpxQ9VJZ8ocDFXNHqgGz5csmlYyUc2oULcu/zy7uFwMDzRN218BDv85/QO3dYI7f9dtCwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display: direction:row items overflowing their parent container element.&quot;
+        title=&quot;example of display: direction:row items overflowing their parent container element.&quot;
+        src=&quot;/static/8bab4b9212a0d4e04329d71c566dcff3/f058b/flex-direction-row-overflow.png&quot;
+        srcset=&quot;/static/8bab4b9212a0d4e04329d71c566dcff3/c26ae/flex-direction-row-overflow.png 158w,
+/static/8bab4b9212a0d4e04329d71c566dcff3/6bdcf/flex-direction-row-overflow.png 315w,
+/static/8bab4b9212a0d4e04329d71c566dcff3/f058b/flex-direction-row-overflow.png 630w,
+/static/8bab4b9212a0d4e04329d71c566dcff3/40601/flex-direction-row-overflow.png 945w,
+/static/8bab4b9212a0d4e04329d71c566dcff3/78612/flex-direction-row-overflow.png 1260w,
+/static/8bab4b9212a0d4e04329d71c566dcff3/024a2/flex-direction-row-overflow.png 2199w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.flex {
+  max-width: 280px;
+  display: flex;
+  flex-direction: row;
+  background-color: lightblue;
+  border-radius: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-right: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h2&gt;Flex-direction:column&lt;/h2&gt;
+&lt;p&gt;Flex-direction:column will render only a single flex line in the vertical axis. Rendering the flex items from top to bottom.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/17207ad0b66aee4d64c0c786416b8004/aa440/flex-direction-column-overflow.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86.70886075949367%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAACE4AAAhOAFFljFgAAACAUlEQVQ4y53STWsTURQG4DcRm86ksZp7QbsQkVomFYsiqD/Ajbhw4U9w796FgqC4cGUJVNO0zcRo2hSi9aMY/MCpbZMmTUqcTJI24My0oqArCUGkbXIkdvzortcLZ3EX9+E99xxEs5VGNFv5MWmsfU+U7I1YvvYlqVu9BHifanm3yRhMzrHjc+e5RjcfTtG1kTjde5OjhLHaiGcrgV/gTMFtcS4Gjs3rrdDbxVYwNdcc1goUzVXrSd1WfoOmMJjWKZqtUKJkN8eLJsXytXpSt5RtCRnbORjS8nRlSKWr4XhzdK5IEyW7Pp6r/gUZgyUCPijUWmrGaIXfLTUjGYPuLy5vb1l0KMNaYXNwWttUF8rr6kKZxtL6t6nyxy1Qc0CRhKPz7+m6Okm3Jp7Rjdgjup1M0etPjaMbgPxkZkm85Ui6FIxkjNDIbPHu0KtMOJiaHXyx/Jl9BbqnH790CScE0ANgP4AOABIRoU4E60APWwcgDHZ17+2Xfb4THZ3SOdm3Z+DU+QueS/3H3KuMscqRPrTXxhIZCgDZKY8L8ALYR4FAOxVbcSZsCoIDAI4D6AXQfilfliSXzfkfUDThYQAKgLPOX+6+6PG4/wVFh9LltNwJwN8uUhR8YIyvOCsjCvYBOO1g2LWFY41zX/U/Ex4EcAbAIecuFf1+r8X5SZMx4T38CUwfAtvjEvtYAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display: direction:column items overflowing their parent container element.&quot;
+        title=&quot;example of display: direction:column items overflowing their parent container element.&quot;
+        src=&quot;/static/17207ad0b66aee4d64c0c786416b8004/f058b/flex-direction-column-overflow.png&quot;
+        srcset=&quot;/static/17207ad0b66aee4d64c0c786416b8004/c26ae/flex-direction-column-overflow.png 158w,
+/static/17207ad0b66aee4d64c0c786416b8004/6bdcf/flex-direction-column-overflow.png 315w,
+/static/17207ad0b66aee4d64c0c786416b8004/f058b/flex-direction-column-overflow.png 630w,
+/static/17207ad0b66aee4d64c0c786416b8004/40601/flex-direction-column-overflow.png 945w,
+/static/17207ad0b66aee4d64c0c786416b8004/78612/flex-direction-column-overflow.png 1260w,
+/static/17207ad0b66aee4d64c0c786416b8004/aa440/flex-direction-column-overflow.png 1500w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.flex {
+  max-height: 150px;
+  max-width: 130px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-bottom: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h2&gt;When flex items overflow&lt;/h2&gt;
+&lt;p&gt;If all flex items can’t fit in the flex container the flex items will try to shrink in width (for flex-direction row) or in height (for flex-direction:column) if allowed by the flex item’s flex property.&lt;/p&gt;
+&lt;p&gt;If the flex items are not allowed to shrink or can’t shrink enough they will overflow the parent flex container’s border if there is not enough width (for flex-direction:row) or enough height (for flex-direction:column).&lt;/p&gt;
+&lt;h2&gt;How to get flex items to wrap instead of overflowing&lt;/h2&gt;
+&lt;p&gt;Introducing the &lt;code class=&quot;language-text&quot;&gt;flex-wrap&lt;/code&gt; property, when &lt;code class=&quot;language-text&quot;&gt;flex-wrap&lt;/code&gt; has either &lt;code class=&quot;language-text&quot;&gt;wrap&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;wrap-reverse&lt;/code&gt; specified and the flex items would be wider (flex-direction:row) or higher (flex-direction:column) than the flex container element a new flex line will be rendered/drawn.&lt;/p&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;flex-wrap: wrap&lt;/code&gt; (&lt;code class=&quot;language-text&quot;&gt;flex-direction:row&lt;/code&gt;)&lt;/h2&gt;
+&lt;p&gt;When more than one flex line is required, we specify flex-wrap:wrap so the subsequent lines will be rendered/drawn on the cross axis (vertical). This means the flex lines will be stacked on top of each other from top to bottom.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6241014d288f4367dc499f45bfe9fc6c/cc7de/flex-direction-row-flex-wrap.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.21518987341772%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAACE4AAAhOAFFljFgAAABNUlEQVQY0y2QeU/CUBDE+7lVFE2MBxEkoLQchRYE5DCCyGFouUqFUpRDxSPGr2GivjG7+tdmZrPv/WYkdbj4VrouUqNHkXZfEGmPkbSX0MZPSN4+IGKMEe1OWevOCtHeFPHBDBn3lT3ZnJAW+uSZ9I8Ubg2xpeaFVyvyMlA1sanmsa2XWIcaA3jiWda+chPHtS72C9fwpoo4umwjWO/hoFinG3HaHkFS7YX4JxJKxwX9lJm+8VTtJWL9e6JnuoQ1gzpcMBl5mrOCbDicjvb0BhN6EjkRblrwVwx4UwX4yi3sZiscdUcvs7cRO4PvooVQ08KaomPvvIbAVQcEsa6kcVhqiOzsHZLmrD5l00Gsfyeos5Mbm6OSRzphzeGvGgjW+4gP/miVzgTUO03qXTYdTpebf3z9AmjKNLzmMBE4AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display: direction:row and flex-wrap:wrap specified.&quot;
+        title=&quot;example of display: direction:row and flex-wrap:wrap specified.&quot;
+        src=&quot;/static/6241014d288f4367dc499f45bfe9fc6c/f058b/flex-direction-row-flex-wrap.png&quot;
+        srcset=&quot;/static/6241014d288f4367dc499f45bfe9fc6c/c26ae/flex-direction-row-flex-wrap.png 158w,
+/static/6241014d288f4367dc499f45bfe9fc6c/6bdcf/flex-direction-row-flex-wrap.png 315w,
+/static/6241014d288f4367dc499f45bfe9fc6c/f058b/flex-direction-row-flex-wrap.png 630w,
+/static/6241014d288f4367dc499f45bfe9fc6c/40601/flex-direction-row-flex-wrap.png 945w,
+/static/6241014d288f4367dc499f45bfe9fc6c/78612/flex-direction-row-flex-wrap.png 1260w,
+/static/6241014d288f4367dc499f45bfe9fc6c/cc7de/flex-direction-row-flex-wrap.png 1605w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.flex {
+  max-width: 560px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: lightblue;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; *:last-child {
+  margin-right: 0;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;The image below shows the direction the lines are drawn and where the new line starts:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/76ccca5bb5715a68821570f9c1739312/03bcf/flex-direction-row-flex-wrap-flow-example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 29.11392405063291%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAACE4AAAhOAFFljFgAAABN0lEQVQY021Qy07DMBDM/1/5C76ASAgkJKAPP9aPddzSNjcOKTROaUCijhatkUBIHEY74xkfZqrt4fi0S6Nr04ib1wE3hyO2wzvu+hNuXgbcsk4jtsOI28Mbbl6PuEunv7o/+TaNcdufLis9l6QXiqyy5AFJzSUZAeTAk5WWxMOCjDQEAsiD//FL3gRSM1k81mibWPFHUPYMyk5NWE/ehkkLmCz4KeB6ciZMRrsJpCkcXSyaM8wZDnwG7aipb0zllKVowmcDmJ2AHG2TVy7maEP20mYnTGYvaF/AGdSuZAJgNgvF97xyDUXtoeIKaibIGyQ5E6USX67htCt8dndP4nFZJuF55OOyvHNlnoO1A6RVfdNW2KVb7NIVdn2NXfoHfW2f9zXuv3nYD3XY/3qs2Qtduo7p4+ILnwWdkRoTGoEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of how display: direction:row and flex-wrap:wrap lines are drawn&quot;
+        title=&quot;example of how display: direction:row and flex-wrap:wrap lines are drawn&quot;
+        src=&quot;/static/76ccca5bb5715a68821570f9c1739312/f058b/flex-direction-row-flex-wrap-flow-example.png&quot;
+        srcset=&quot;/static/76ccca5bb5715a68821570f9c1739312/c26ae/flex-direction-row-flex-wrap-flow-example.png 158w,
+/static/76ccca5bb5715a68821570f9c1739312/6bdcf/flex-direction-row-flex-wrap-flow-example.png 315w,
+/static/76ccca5bb5715a68821570f9c1739312/f058b/flex-direction-row-flex-wrap-flow-example.png 630w,
+/static/76ccca5bb5715a68821570f9c1739312/40601/flex-direction-row-flex-wrap-flow-example.png 945w,
+/static/76ccca5bb5715a68821570f9c1739312/78612/flex-direction-row-flex-wrap-flow-example.png 1260w,
+/static/76ccca5bb5715a68821570f9c1739312/03bcf/flex-direction-row-flex-wrap-flow-example.png 1653w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;flex-wrap:wrap&lt;/code&gt; (&lt;code class=&quot;language-text&quot;&gt;flex-direction:column&lt;/code&gt;)&lt;/h2&gt;
+&lt;p&gt;When more than one flex line is required, we specify flex-wrap:wrap so the subsequent lines will be rendered/drawn on the cross axis (horizontal). This means the flex lines will be side by side, from left to right.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/729ba661af5e9ee0aae8713b8d086123/e5715/flex-direction-column-flex-wrap.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 131.0126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAACE4AAAhOAFFljFgAAAEm0lEQVRIx1VVWVOaSRTlN+Y5k5qZlOVMaszUaGklaowLbsEFlwgioLKKBGVzXwAR3BBxF4xbTCbGMeZ9UvWd1LkswYeubpr+bp97zrm3VY7U2a05vg978lQZ3ThSzLE98Lc5vofhtQOMrB/CGE3BFNuDLZHB6MYRhuP72bF2kD8j39m2M/+rLJvHsG2fKgML63DsnMF3dofJ0y/wnf0H99FHTKQ/Y2BxHabYLviRZetE9jzpzxg/vIb76Frmd8eflKGVHaicu+dKo8WD18Mu5ZXJqbQ4/dAGQ1A7vHCmziWwMbqDtvEpVPYaZdZ45gQ5L353/EmCcW2MphTV2O6FUjtkxxvPrFLepUNVvwmPy6tR1tYjKTKgPrQlKCu0gyjv1uOXylq0uoIIXN7DTXTMJHMjF6usWyfkDx2T82D6REWeBkMJud13fgdDOIHB0BZ0SxtZztYOhB6iYvocOYRQ8eO+2VUhuX8uht6ZqMxv59fQO72CvpmoXKYNhGBc2ZH/OLjfMxVGz1QEPdMRdPmXMbSSJMI09EubEnT88AMmMzdCuOfkXyGbayKjIETKPaLh/5x5nukWEDJd3l5S1yI3Uu3uwDI6JublY+/7W0HW7p4WUd7Ox9EyFsBgOIEu/5II9MYzK4BoNxWJJ3d15jH80ajBk6o6VHTr8ae6Q7j0X3wV/igKRfvtZYMIQ9Ge1jThr1atCFljsEG/vAUVfWXbPoVl8wTWRFqCFItChERDpUmNaXVXLDMq/s3IZfbkexniQxFlJgpDZBsDC2sCnYOpaYNhEUYzMSdrpq5f3iwIwzMcXFMcCUhRSDqVYnDv6a2gyhMduLgXhMbVlKCh1ybSN+I9Wmwy80XEpEg/RQmG8ay5E1V9JrEIBeFMdKwaoqCR/+kcELTd/mU0O3xi9EarR76nycU25EFEMTmhtk0K2RSktKEdJa9bUVLXWgjwt6ZfxHtcUZ0Tw4xfX9Sj07uAwOU3DEWSeVEyQjSJteTINue6CUWgwuSH1DDlyj4jGkbdUi30Z76upfTIGwmlaVkleVH6c0O3uCHpdwdCIgh9ysAPqyouWWQrJZGWstMtrosQbF+c/ed3BWEoBpGSeKIi7/QnGwcF5H62OaSgYjW8GBgR01IEVgs9RvJ5c7Z9paC2e4XD+hE3mqwT6PQt5kQLS8cppMyAL3WjYB8sa+9FaX27VMKj0ufifFEvkoTGM4tqvUVaG0Xj+lFpmYg3fvAhW6LSvhJpIZaBucH0WRXkg3tsTawQiuLav5LUh3Pti2uOXMcual8zUSGaPBZXAM1eaF/BsJRjvpqYbv4cxWFDKYhC2YmCtqEoJNx//lXQkUNDeBu6pWzJOXcvELz6JlTk29iDBjt+eK2QQ4rS5p6GIZKUttTlW5IUsyonxIvP23vR7PBK4NaxgJQqy9Bd/ATkA6rtXj5SeKbuxNNaNX6vaYJr/1KeAKJnzbOanlS+ErU5it6Vn48UK8Uc21NcB1fiL6Yve/E9sQNvJm8UghVEEYiMZ/mbYuSagyIcOnbO7kdyjzUPsvToQ84PHvrVlOyxb/L/fN8sfuiticz3H6bGVTjcfwO9AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of display: direction:column and flex-wrap:wrap specified.&quot;
+        title=&quot;example of display: direction:column and flex-wrap:wrap specified.&quot;
+        src=&quot;/static/729ba661af5e9ee0aae8713b8d086123/f058b/flex-direction-column-flex-wrap.png&quot;
+        srcset=&quot;/static/729ba661af5e9ee0aae8713b8d086123/c26ae/flex-direction-column-flex-wrap.png 158w,
+/static/729ba661af5e9ee0aae8713b8d086123/6bdcf/flex-direction-column-flex-wrap.png 315w,
+/static/729ba661af5e9ee0aae8713b8d086123/f058b/flex-direction-column-flex-wrap.png 630w,
+/static/729ba661af5e9ee0aae8713b8d086123/e5715/flex-direction-column-flex-wrap.png 768w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;css&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;.flex {
+  max-height: 450px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: lightblue;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.flex &amp;gt; * {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;The image below shows the direction the lines are drawn and where the new line starts:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4fb6bf21cdde67954c162f50f982a8f5/e5715/flex-direction-column-flex-wrap-flow-example.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 134.17721518987344%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAYAAAB836/YAAAACXBIWXMAACE4AAAhOAFFljFgAAAFFElEQVRIx2WWWW8iRxSF/b+j/IxIoyRSJkqeosx4ZmKPsWG8YWgMpg291tILSwPd0Atm8ZJpOFEVYI8nDyWhanG67v3uOV17bjL7mUZpiYbJEU1mBWqQAisrBZLOC3QUF+g4K7Du8Ji//eOI/f6nzf56n7A3v1TZUfEznUyPaZgUaJSKdeLEd/t7dJyBjadgUQY+XcIhLpxqA87sETxKweePICenIC0D7GEFNnsAX36FUyiBe33wdAE+uQObTEGjFHs0SnOjP8qbzMu1wThnBs2daj1n02XuTu5y736Vs9J53tZJrrrdleEHa5YtV261nntuL/fmT7mXLXM3XeQkTPI9Gibrhs3R8nrrK91e104vcb3/CRWLggwn8O5zsNI52i0DVZNCaZu4Mim0w2P4XgB39rh204VYIGGy3qNRBqMfQuU+brsDGKqG1lERzc4ATpTBF2WWzmGYFKrfh8o8+cw8OYXvB/DmT/CypVw0TLFHwgT2cAJrMIY9mYLoNuhlFXZ8BzuIYKdzWEdFGAaFPc5gDyawkxnoWRnEYpu94WSzRvFGUIiRUQwS34EaBKysgIoSxH62kIKmxUHEC4cT0GwBdnYFajug8UyeTB5MCIqStc4Aoo80ncOlHnilDja9h5fMtiVfQNMs2RIWpfKZe1WDwztg6UJOCd9RZmPRwxEU3YJicyinF2h8PMA180C/gdLaQqncaqjaHM0PB1AurlAxCBTNkgcSZUtBoWz0RlA7AdTKNbTjL1C7QzmH/sP6BYrXR8NiaAUR9KMiWjctCart96F1BxtBEqbyx3MPdQJyWYUV34EE4xco5gaK6KEAtoHCYQkooxj2MH4NRYpONlBoWQF5hrLcQmFyCmyxl85Bz1+g7IBsoaTQOgHqopTeEMxkcLZQnHEmrceKZxJK0+vB6A7BpkvQ0zJMzZYvoWEi51BUK3uo90a4Fs21GGpnlxKKcENV1VCxOczDY9zUVQmlSV1ULIb63/uoXVRw2TZw63S3gslrKMYoRruuwiidQ+0O0CQOmqLZhRLabRNNt4eW08WlbqP+7gOMtjh1H2Y/hDe93wjunCKgPDulrMCOZ6+cYpoMVpTCCiLc9kNon09AxKiIvm5d8gxlZ50dZWE9ksw3UNIXp9BkJimLPXZekZQFSHmYnfVEyW0/QMvtyakXeejWmts8zOB94xR9MIbZG8EUsC6rcJyuzNBX4SAEa9tpr3Mf9YsrtApFVG0Gze09O6XZuEW5baB805LAbt5/lE4R7hIa2/jajc0AZhBB7QygVutQDwtouF2wUQL/ceMUXSfQhxPplBu/D71QxI3SkE5xktkL5V0PxSztoJCLioTyOm0YqHDP8Jv4ElCEe7ZA/gflJQ8VCeVVHpq7PBzLZzvrbSh/B0U45ZZ3YEapjC9XaYDPHuDFs+fE1nUbDacDqx/CmT9JKJ7o8feJzcbZuqbbwinrOvfXN2UF9f1PqFEXPEwlFFo8kyULJ1VUDQp10Xj3QVrPmz99/01J87Yf5FYQ5VoQ5Wq1nt8eFlZNv792xtnKX35d05PTFaFergVh3rBY3uwOcu3zyco26Mpb/Jt76eKbr16UQXybReKybAluMfDrJuh9Di6S+GkN8uUCNnHAs+UmsdM5eLkGznzwZLb573ib2LubAxnFR0TcBNzeAfvpTZsVzyZUt5u0dD7iv75VaRAdkCg9JmFyTOK7f/gPP3L2y29tMl0ekFEs9uXN4T+eW31kNcKehgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;example of how display: direction:column and flex-wrap:wrap lines are drawn&quot;
+        title=&quot;example of how display: direction:column and flex-wrap:wrap lines are drawn&quot;
+        src=&quot;/static/4fb6bf21cdde67954c162f50f982a8f5/f058b/flex-direction-column-flex-wrap-flow-example.png&quot;
+        srcset=&quot;/static/4fb6bf21cdde67954c162f50f982a8f5/c26ae/flex-direction-column-flex-wrap-flow-example.png 158w,
+/static/4fb6bf21cdde67954c162f50f982a8f5/6bdcf/flex-direction-column-flex-wrap-flow-example.png 315w,
+/static/4fb6bf21cdde67954c162f50f982a8f5/f058b/flex-direction-column-flex-wrap-flow-example.png 630w,
+/static/4fb6bf21cdde67954c162f50f982a8f5/e5715/flex-direction-column-flex-wrap-flow-example.png 768w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[display:flex vs display:inline flex]]></title><description><![CDATA[Do you know the difference between  and ? When should you use the one over the other?  When using  the container element acts like a block…]]></description><link>https://haikudocs.com/flexbox/display-flex-flex-vs-inline/</link><guid isPermaLink="false">https://haikudocs.com/flexbox/display-flex-flex-vs-inline/</guid><pubDate>Sat, 23 Oct 2021 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Do you know the difference between &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;display:inline-flex&lt;/code&gt;? When should you use the one over the other?&lt;/p&gt;
 &lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;When using &lt;code class=&quot;language-text&quot;&gt;display:flex&lt;/code&gt; the container element acts like a block level element. The flex container element is as wide as its parent container (the blue background is the flex container element).&lt;/p&gt;
 &lt;p&gt;&lt;span
